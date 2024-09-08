@@ -1,4 +1,6 @@
 import { defineConfig } from "vite";
+import os from "os";
+
 export default defineConfig({
   build: {
     rollupOptions: {
@@ -8,6 +10,6 @@ export default defineConfig({
     },
   },
   server: {
-    open: process.env.BROWSER='Google Chrome.app'
+    open: os.platform() === "darwin" ? "Google Chrome" : "chrome", // Open Chrome based on the OS
   },
 });
