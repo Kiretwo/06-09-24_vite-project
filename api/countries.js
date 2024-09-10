@@ -10,5 +10,3 @@ export async function fetchCountries() {
     return [];
   }
 }
-
-
